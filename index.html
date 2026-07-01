@@ -189,14 +189,14 @@ section{padding:120px 56px;position:relative}
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1400px;margin:0 auto}
 .proj-card{
   border-radius:24px;overflow:hidden;position:relative;
-  transition:var(--tr);cursor:pointer;aspect-ratio:4/3;
+  transition:var(--tr);cursor:pointer;height:320px;
   box-shadow:0 4px 24px rgba(0,0,0,0.02)
 }
 .proj-card:hover{
   transform:translateY(-6px);
   box-shadow:0 20px 40px rgba(0,0,0,0.05)
 }
-.proj-feat{grid-column:span 2}
+.proj-feat{grid-column:span 2;height:320px}
 .proj-card .p-img{position:absolute;inset:0;overflow:hidden}
 .proj-card .p-img img{width:100%;height:100%;object-fit:cover;display:block;transition:var(--tr)}
 .proj-card:hover .p-img img{transform:scale(1.06)}
@@ -213,11 +213,6 @@ section{padding:120px 56px;position:relative}
   background:linear-gradient(transparent,rgba(11,11,26,0.85));
   z-index:1
 }
-.proj-card .p-tag{display:inline-block;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:1px;margin-bottom:10px;width:fit-content;z-index:2}
-.p-tag.blue{background:rgba(42,109,244,0.2);color:#fff}
-.p-tag.green{background:rgba(157,203,31,0.2);color:#fff}
-.p-tag.orange{background:rgba(245,158,11,0.2);color:#fff}
-.p-tag.pink{background:rgba(236,72,153,0.2);color:#fff}
 .proj-card .p-body h3{font-size:20px;font-weight:700;margin-bottom:6px;color:#fff;z-index:2}
 .proj-card .p-body p{color:rgba(255,255,255,0.7);font-size:13px;line-height:1.6;flex:1;z-index:2}
 
@@ -487,28 +482,28 @@ footer .cr{font-size:12px}
 <div class="proj-grid">
 <div class="proj-card proj-feat reveal" onclick="window.location.href='projects/hq-showroom.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/0001.png" alt="HQ Showroom" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">SPACE DESIGN</div></div>
-<div class="p-body"><span class="p-tag blue">✦ Space Design</span><h3>HQ Showroom</h3><p>Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p>
+<div class="p-body"><h3>HQ Showroom</h3><p>Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p>
 </div>
 </div>
 <div class="proj-card reveal" onclick="window.location.href='projects/mf-brand-upgrade.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/mf_0.png" alt="Maker Faire Shenzhen" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MAKER FAIRE</div></div>
-<div class="p-body"><span class="p-tag green">✦ Maker Faire</span><h3>Maker Faire Shenzhen</h3><p>Since 2012, connecting Shenzhen's local hardware ecosystem with the global tech community.</p>
+<div class="p-body"><h3>Maker Faire Shenzhen</h3><p>Since 2012, connecting Shenzhen's local hardware ecosystem with the global tech community.</p>
 </div>
 </div>
 <div class="proj-card reveal" onclick="window.location.href='projects/chaihuo-maker-space.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/signage_2.png" alt="AI Signage" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">AI INTERACTION</div></div>
-<div class="p-body"><span class="p-tag orange">✦ AI Interaction</span><h3>AI Interactive Signage</h3><p>When a can gets AI inspiration — from color recognition to dream-scape generation, an intelligent beverage recommender that reads your emotions.</p>
+<div class="p-body"><h3>AI Interactive Signage</h3><p>When a can gets AI inspiration — from color recognition to dream-scape generation, an intelligent beverage recommender that reads your emotions.</p>
 </div>
 </div>
 <div class="proj-card reveal" onclick="window.location.href='projects/souvenir-collection.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/souvenir_1.png" alt="Souvenir Collection" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MERCHANDISE</div></div>
-<div class="p-body"><span class="p-tag pink">✦ Merchandise</span><h3>Souvenir Collection</h3><p>Inspired by engineer culture, a series of branded merchandise that embodies the Seeedstudio spirit.</p>
+<div class="p-body"><h3>Souvenir Collection</h3><p>Inspired by engineer culture, a series of branded merchandise that embodies the Seeedstudio spirit.</p>
 </div>
 </div>
 
 <div class="proj-card reveal" onclick="window.location.href='projects/product-video.html'" style="cursor:pointer">
 <div class="p-img"><video src="projects/assets/banner-video.webm" muted playsinline loop style="width:100%;height:100%;object-fit:cover" onmouseover="this.play()" onmouseout="this.pause()"></video><div class="p-deco">SHOWREEL</div></div>
-<div class="p-body"><span class="p-tag green">&loz; Showreel</span><h3>Product Showreel</h3><p>Cinematic visual storytelling redefining industrial aesthetics &mdash; four films showcasing the fusion of technology, design, and maker spirit.</p>
+<div class="p-body"><h3>Product Showreel</h3><p>Cinematic visual storytelling redefining industrial aesthetics &mdash; four films showcasing the fusion of technology, design, and maker spirit.</p>
 </div>
 </div>
 </div>
@@ -1187,4 +1182,4 @@ setTimeout(update,50);
     const mouseY = e.clientY - rect.top;
 
     const offsetX = ((gridOffset.x % squareSize) + squareSize) % squareSize;
-    const offsetY = ((gridOffset.y % squ
+    const offsetY = ((gridOffset.y % squ                                                                                                                                                                                                                                                                                                                                   
