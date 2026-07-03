@@ -298,14 +298,26 @@ section{padding:120px 56px;position:relative}
 .vi-s p{font-size:12px;color:var(--gray);font-family:monospace;margin-top:4px}
 
 /* ── Footer ── */
-footer{background:var(--dark);color:rgba(255,255,255,0.35);padding:64px 56px 44px;text-align:center;border-top:1px solid rgba(255,255,255,0.04)}
-footer .fl{font-size:20px;font-weight:800;color:#fff;margin-bottom:6px}
-footer .fl small{font-weight:400;font-size:13px;color:rgba(255,255,255,0.25);display:block;margin-top:2px}
-footer .flinks{display:flex;justify-content:center;gap:28px;margin:20px 0;flex-wrap:wrap}
-footer .flinks a{font-size:13px;color:rgba(255,255,255,0.35);transition:var(--tr)}
-footer .flinks a:hover{color:#fff}
-footer .fd{height:1px;background:rgba(255,255,255,0.06);margin:24px auto;max-width:400px}
-footer .cr{font-size:12px}
+footer{background:#070814;color:rgba(255,255,255,0.56);padding:72px 56px 34px;border-top:1px solid rgba(255,255,255,0.08);position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--blue),var(--orange),var(--green))}
+footer .footer-inner{position:relative;z-index:1;max-width:1400px;margin:0 auto}
+footer .footer-main{display:grid;grid-template-columns:minmax(280px,1.35fr) minmax(220px,.8fr) minmax(260px,.85fr);gap:56px;align-items:start}
+footer .fl{font-size:28px;font-weight:800;color:#fff;letter-spacing:0;margin-bottom:14px}
+footer .fl small{font-weight:500;font-size:13px;color:rgba(255,255,255,0.38);display:block;margin-top:4px}
+footer .footer-copy{max-width:560px;color:rgba(255,255,255,0.58);font-size:14px;line-height:1.8}
+footer .footer-kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(157,203,31,0.1);color:#c6ec57;border:1px solid rgba(157,203,31,0.22);font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;margin-bottom:18px}
+footer .footer-dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 18px rgba(157,203,31,.7)}
+footer .footer-title{font-size:12px;font-weight:700;color:rgba(255,255,255,0.42);letter-spacing:.8px;text-transform:uppercase;margin-bottom:16px}
+footer .flinks{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+footer .flinks a{font-size:13px;color:rgba(255,255,255,0.62);transition:var(--tr)}
+footer .flinks a:hover{color:#fff;transform:translateX(4px)}
+footer .footer-meta{display:grid;gap:10px}
+footer .footer-meta span{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.06);font-size:12px;color:rgba(255,255,255,0.55)}
+footer .footer-meta strong{color:#fff;font-size:12px;font-weight:600}
+footer .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:54px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08)}
+footer .cr{font-size:12px;color:rgba(255,255,255,0.38)}
+footer .footer-mark{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.5);font-size:12px}
+footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--blue),var(--orange),var(--green))}
 
 /* ── Animations ── */
 .reveal{opacity:1;transform:translateY(0);transition:all 0.8s cubic-bezier(.22,1,.36,1)}
@@ -323,6 +335,8 @@ footer .cr{font-size:12px}
   .widget-grid{grid-template-columns:repeat(2,1fr)}
   .brand-card .brand-flex{grid-template-columns:1fr;gap:32px}
   .brand-card{padding:36px}
+  footer .footer-main{grid-template-columns:1fr 1fr;gap:40px}
+  footer .footer-brand{grid-column:span 2}
 }
 @media(max-width:768px){
   section{padding:72px 24px}.navbar{padding:0 20px}
@@ -335,9 +349,15 @@ footer .cr{font-size:12px}
   .brand-card .brand-flex{grid-template-columns:1fr;gap:24px}
   .brand-card .brand-vals{grid-template-columns:1fr}
   #brand-story{min-height:250vh}
+  footer{padding:56px 24px 28px}
+  footer .footer-main{grid-template-columns:1fr;gap:34px}
+  footer .footer-brand{grid-column:auto}
+  footer .flinks{grid-template-columns:1fr}
+  footer .footer-bottom{align-items:flex-start;flex-direction:column;gap:12px;margin-top:38px}
 }
 @media(max-width:480px){#brand-story{min-height:300vh}}
 @media(max-width:480px){.hero h1{font-size:30px}.sec-title{font-size:24px}.vi-colors{grid-template-columns:1fr}.vi-spacing{grid-template-columns:1fr}}
+@media(min-width:1025px){.widget-grid:has(> :nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* ── Back to Top Button ── */
 .back-to-top {
@@ -582,11 +602,27 @@ footer .cr{font-size:12px}
 </section>
 
 <footer>
+<div class="footer-inner">
+<div class="footer-main">
+<div class="footer-brand">
+<div class="footer-kicker"><span class="footer-dot"></span>Live Design System</div>
 <div class="fl">SDS<small>Seeedstudio Design System</small></div>
-<p>Building a unified, efficient, and scalable brand design system</p>
+<p class="footer-copy">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.</p>
+</div>
+<div>
+<div class="footer-title">Explore</div>
 <div class="flinks"><a href="#brand-story">Brand Story</a><a href="#projects">Key Projects</a><a href="#widgets">Widgets</a><a href="#tools">Design Tools</a><a href="#vi">VI Guide</a></div>
-<div class="fd"></div>
-<p class="cr">© 2026 Seeedstudio · Brand Design System · Continuously Evolving</p>
+</div>
+<div>
+<div class="footer-title">System Status</div>
+<div class="footer-meta"><span>Version<strong>2026</strong></span><span>Scope<strong>Brand + Product</strong></span><span>Mode<strong>Continuously Evolving</strong></span></div>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="cr">© 2026 Seeedstudio · Brand Design System</p>
+<div class="footer-mark">Built for clearer collaboration</div>
+</div>
+</div>
 </footer>
 
 <!-- old particle script removed; replaced by shader-based background further below -->
@@ -963,223 +999,114 @@ void main() {
 })();
 </script>
 
-// ── Brand Card Scroll Expansion ──
+<script>
+// Brand Card Scroll Expansion
 (function(){
-var card=document.getElementById('brandCard');
-var section=document.getElementById('brand-story');
-var secTitle=document.querySelector('#brand-story .sec-title');
-if(!card||!section)return;
+  var card = document.getElementById('brandCard');
+  var section = document.getElementById('brand-story');
+  var secTitle = document.querySelector('#brand-story .sec-title');
+  if(!card || !section) return;
 
-var minW=700;
-var maxW=1400;
-var scaleMin=minW/maxW;
-var typedStarted=false;
+  var minW = 700;
+  var maxW = 1400;
+  var scaleMin = minW / maxW;
 
-// Directly trigger typewriter for section 1 after a delay
-setTimeout(function(){
-if(secTitle&&secTitle.dataset.typewriter)typeNextChar(secTitle);
-},800);
+  setTimeout(function(){
+    if(secTitle && secTitle.dataset.typewriter) typeNextChar(secTitle);
+  }, 800);
 
-function update(){
-var wh=window.innerHeight;
-var scrollY=window.pageYOffset||document.documentElement.scrollTop;
-var sectionTop=section.offsetTop;
-var progress=Math.max(0,Math.min(1,(scrollY+wh-sectionTop)/wh));
-card.style.transform='scale('+(scaleMin+(1-scaleMin)*progress)+')';
-}
-window.addEventListener('scroll',update);
-window.addEventListener('resize',update);
-setTimeout(update,50);
+  function update(){
+    var wh = window.innerHeight;
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var sectionTop = section.offsetTop;
+    var progress = Math.max(0, Math.min(1, (scrollY + wh - sectionTop) / wh));
+    card.style.transform = 'scale(' + (scaleMin + (1 - scaleMin) * progress) + ')';
+  }
+
+  window.addEventListener('scroll', update);
+  window.addEventListener('resize', update);
+  setTimeout(update, 50);
 })();
 </script>
-<button class="back-to-top" id="backToTop" aria-label="Back to Top">▲</button>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to Top">&#8593;</button>
+
 <script>
-// ── Back to Top Behavior ──
+// Back to Top Behavior
 (function(){
-  const btn = document.getElementById('backToTop');
-  if (!btn) return;
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 400) {
-      btn.classList.add('show');
-    } else {
-      btn.classList.remove('show');
-    }
-  });
-  btn.addEventListener('click', function() {
+  var btn = document.getElementById('backToTop');
+  if(!btn) return;
+
+  function update(){
+    btn.classList.toggle('show', window.scrollY > 400);
+  }
+
+  window.addEventListener('scroll', update);
+  btn.addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+  update();
 })();
 </script>
+
 <script>
-;(function(){
-  const section = document.getElementById('tools');
-  const canvas = document.getElementById('tools-canvas');
+// Design Tools Background Grid
+(function(){
+  var section = document.getElementById('tools');
+  var canvas = document.getElementById('tools-canvas');
   if(!canvas || !section) return;
 
-  canvas.style.background = 'transparent';
-  canvas.style.zIndex = '0';
+  var ctx = canvas.getContext('2d');
+  var squareSize = 40;
+  var gridOffset = { x: 0, y: 0 };
+  var speed = 0.45;
 
-  const ctx = canvas.getContext('2d');
+  function resize(){
+    var ratio = Math.min(window.devicePixelRatio || 1, 2);
+    var width = section.clientWidth || 1;
+    var height = section.clientHeight || 1;
+    canvas.width = Math.floor(width * ratio);
+    canvas.height = Math.floor(height * ratio);
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  }
 
-  // Configuration corresponding to reference
-  const direction = 'diagonal';
-  const speed = 0.5;
-  const borderColor = '#2F293A';
-  const squareSize = 40;
-  const hoverFillColor = '#222';
-  const shape = 'square';
-  const hoverTrailAmount = 0;
+  function draw(){
+    var width = section.clientWidth || 1;
+    var height = section.clientHeight || 1;
+    ctx.clearRect(0, 0, width, height);
 
-  let sectionWidth = section.clientWidth || 1;
-  let sectionHeight = section.clientHeight || 1;
-  
-  const gridOffset = { x: 0, y: 0 };
-  let hoveredSquare = null;
-  const cellOpacities = new Map();
+    var offsetX = ((gridOffset.x % squareSize) + squareSize) % squareSize;
+    var offsetY = ((gridOffset.y % squareSize) + squareSize) % squareSize;
 
-  const resizeCanvas = () => {
-    sectionWidth = section.clientWidth || 1;
-    sectionHeight = section.clientHeight || 1;
-    canvas.width = sectionWidth;
-    canvas.height = sectionHeight;
-  };
-
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-
-  const drawHex = (cx, cy, size) => {
-    ctx.beginPath();
-    for (let i = 0; i < 6; i++) {
-      const angle = (Math.PI / 3) * i;
-      const vx = cx + size * Math.cos(angle);
-      const vy = cy + size * Math.sin(angle);
-      if (i === 0) ctx.moveTo(vx, vy);
-      else ctx.lineTo(vx, vy);
-    }
-    ctx.closePath();
-  };
-
-  const drawCircle = (cx, cy, size) => {
-    ctx.beginPath();
-    ctx.arc(cx, cy, size / 2, 0, Math.PI * 2);
-    ctx.closePath();
-  };
-
-  const drawTriangle = (cx, cy, size, flip) => {
-    ctx.beginPath();
-    if (flip) {
-      ctx.moveTo(cx, cy + size / 2);
-      ctx.lineTo(cx + size / 2, cy - size / 2);
-      ctx.lineTo(cx - size / 2, cy - size / 2);
-    } else {
-      ctx.moveTo(cx, cy - size / 2);
-      ctx.lineTo(cx + size / 2, cy + size / 2);
-      ctx.lineTo(cx - size / 2, cy + size / 2);
-    }
-    ctx.closePath();
-  };
-
-  const hexToRgba = (hex, alpha) => {
-    const h = hex.replace('#', '');
-    const r = parseInt(h.substring(0, 2), 16);
-    const g = parseInt(h.substring(2, 4), 16);
-    const b = parseInt(h.substring(4, 6), 16);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  };
-
-  const drawGrid = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const startX = -squareSize * 2;
-    const startY = -squareSize * 2;
-    const endX = canvas.width + squareSize * 2;
-    const endY = canvas.height + squareSize * 2;
-
-    const offsetX = ((gridOffset.x % squareSize) + squareSize) % squareSize;
-    const offsetY = ((gridOffset.y % squareSize) + squareSize) % squareSize;
-
-    // 1. Draw shape border
-    ctx.strokeStyle = borderColor;
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
     ctx.lineWidth = 1;
-
-    for (let x = startX + offsetX; x < endX; x += squareSize) {
-      for (let y = startY + offsetY; y < endY; y += squareSize) {
-        const col = Math.floor((x - offsetX) / squareSize);
-        const row = Math.floor((y - offsetY) / squareSize);
-        const key = `${col},${row}`;
-
-        if (shape === 'square') {
-          ctx.strokeRect(x, y, squareSize, squareSize);
-        } else if (shape === 'circle') {
-          drawCircle(x + squareSize / 2, y + squareSize / 2, squareSize);
-          ctx.stroke();
-        } else if (shape === 'hexagon') {
-          drawHex(x + squareSize / 2, y + squareSize / 2, squareSize / 2);
-          ctx.stroke();
-        } else if (shape === 'triangle') {
-          drawTriangle(x + squareSize / 2, y + squareSize / 2, squareSize, (col + row) % 2 === 0);
-          ctx.stroke();
-        }
-
-        // 2. Draw hover fill
-        const isHovered = hoveredSquare && hoveredSquare.x === col && hoveredSquare.y === row;
-        let opacity = cellOpacities.get(key) || 0;
-        if (isHovered) {
-          opacity += (1 - opacity) * 0.15;
-        } else {
-          opacity += (0 - opacity) * 0.05;
-        }
-
-        if (opacity > 0.001) {
-          cellOpacities.set(key, opacity);
-          ctx.fillStyle = hexToRgba(hoverFillColor, opacity);
-          if (shape === 'square') {
-            ctx.fillRect(x, y, squareSize, squareSize);
-          } else if (shape === 'circle') {
-            drawCircle(x + squareSize / 2, y + squareSize / 2, squareSize);
-            ctx.fill();
-          } else if (shape === 'hexagon') {
-            drawHex(x + squareSize / 2, y + squareSize / 2, squareSize / 2);
-            ctx.fill();
-          } else if (shape === 'triangle') {
-            drawTriangle(x + squareSize / 2, y + squareSize / 2, squareSize, (col + row) % 2 === 0);
-            ctx.fill();
-          }
-        } else {
-          cellOpacities.delete(key);
-        }
+    for(var x = -squareSize + offsetX; x < width + squareSize; x += squareSize){
+      for(var y = -squareSize + offsetY; y < height + squareSize; y += squareSize){
+        ctx.strokeRect(x, y, squareSize, squareSize);
       }
     }
 
-    // 3. Draw radial vignette gradient to blend edges
-    const grad = ctx.createRadialGradient(
-      canvas.width / 2, canvas.height / 2, 0,
-      canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-    );
-    grad.addColorStop(0, 'rgba(8, 16, 28, 0)');
-    grad.addColorStop(1, 'rgba(8, 16, 28, 0.95)');
+    var grad = ctx.createRadialGradient(width * 0.5, height * 0.45, 0, width * 0.5, height * 0.45, Math.max(width, height) * 0.7);
+    grad.addColorStop(0, 'rgba(42,109,244,0.08)');
+    grad.addColorStop(0.55, 'rgba(8,16,28,0.08)');
+    grad.addColorStop(1, 'rgba(8,16,28,0.92)');
     ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-  };
+    ctx.fillRect(0, 0, width, height);
+  }
 
-  let dx = 0, dy = 0;
-  if (direction === 'diagonal') { dx = 1; dy = 1; }
-  else if (direction === 'up') { dx = 0; dy = -1; }
-  else if (direction === 'down') { dx = 0; dy = 1; }
-  else if (direction === 'left') { dx = -1; dy = 0; }
-  else if (direction === 'right') { dx = 1; dy = 0; }
+  function animate(){
+    gridOffset.x += speed;
+    gridOffset.y += speed;
+    draw();
+    requestAnimationFrame(animate);
+  }
 
-  const updateAnimation = () => {
-    gridOffset.x += dx * speed;
-    gridOffset.y += dy * speed;
-    drawGrid();
-    requestAnimationFrame(updateAnimation);
-  };
-
-  const handleMouseMove = (e) => {
-    const rect = canvas.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    const offsetX = ((gridOffset.x % squareSize) + squareSize) % squareSize;
-    const offsetY = ((gridOffset.y % squ                                                                                                                                                                                                                                                                                                                                   
+  window.addEventListener('resize', resize);
+  resize();
+  animate();
+})();
+</script>
+</body>
+</html>
