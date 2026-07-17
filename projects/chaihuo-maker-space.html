@@ -92,12 +92,13 @@ body{font-family:"JetBrains Mono","PingFang SC","Microsoft YaHei",monospace;back
   </svg>
 </a>
 <ul class="nav-links" id="navLinks">
-<li><a href="../index.html">Home</a></li>
-<li><a href="../index.html#brand-story">Brand Story</a></li>
-<li><a href="../index.html#projects">Key Projects</a></li>
-<li><a href="../index.html#widgets">Widgets</a></li>
-<li><a href="../index.html#tools">Design Tools</a></li>
-<li><a href="../index.html#vi">VI Guide</a></li>
+<li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+<li><a href="../index.html#brand-story" data-i18n="nav.brand-story">Brand Story</a></li>
+<li><a href="../index.html#projects" data-i18n="nav.key-projects">Key Projects</a></li>
+<li><a href="../index.html#widgets" data-i18n="nav.widgets">Widgets</a></li>
+<li><a href="../index.html#tools" data-i18n="nav.design-tools">Design Tools</a></li>
+<li><a href="../index.html#vi" data-i18n="nav.vi-guide">VI Guide</a></li>
+<li><button id="lang-toggle" onclick="toggleLang()" style="padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;background:var(--green);color:var(--dark);border:none;cursor:pointer;font-family:inherit;transition:all .3s" data-i18n="nav.toggle">中文</button></li>
 </ul>
 <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
@@ -208,5 +209,6 @@ body{font-family:"JetBrains Mono","PingFang SC","Microsoft YaHei",monospace;back
 <script>
 document.getElementById('navLinks')?.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
 </script>
+<script src="../i18n.js"></script>
 </body>
 </html>
