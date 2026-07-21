@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SDS · Seeedstudio Brand Design System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
 <script src="assets/js/analytics.js"></script>
 <style>
@@ -372,11 +373,12 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
   </svg>
 </a>
 <ul class="nav-links" id="navLinks">
-<li><a href="#brand-story" class="active">Brand Story</a></li>
-<li><a href="#projects">Key Projects</a></li>
-<li><a href="#widgets">Widgets</a></li>
-<li><a href="#tools">Design Tools</a></li>
-<li><a href="#vi">VI Guide</a></li>
+<li><a href="#brand-story" class="active" data-i18n="nav.brand-story">Brand Story</a></li>
+<li><a href="#projects" data-i18n="nav.key-projects">Key Projects</a></li>
+<li><a href="#widgets" data-i18n="nav.widgets">Widgets</a></li>
+<li><a href="#tools" data-i18n="nav.design-tools">Design Tools</a></li>
+<li><a href="#vi" data-i18n="nav.vi-guide">VI Guide</a></li>
+<li><button id="lang-toggle" onclick="toggleLang()" style="padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;background:var(--green);color:var(--dark);border:none;cursor:pointer;font-family:inherit;transition:all .3s" data-i18n="nav.toggle">中文</button></li>
 </ul>
 <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
@@ -387,11 +389,11 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <div class="hero-overlay"></div>
 <div class="hero-content reveal">
 <div class="hero-badge"><span class="dot"></span>SEEEDSTUDIO DESIGN SYSTEM v2.0</div>
-<h1 id="hero-title" class="hero-title"><span class="line">Seeed Studio Design System</span></h1>
-<p>From brand story to visual guidelines, build a unified Seeedstudio design language system that drives continuous evolution of product experience and brand value.</p>
+<h1 id="hero-title" class="hero-title" data-i18n="hero.title"><span class="line">Seeedstudio Design System</span></h1>
+<p data-i18n="hero.desc">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.</p>
 <div class="hero-actions">
-<a href="#brand-story" class="btn btn-primary">Explore Brand</a>
-<a href="#vi" class="btn btn-outline">View VI Guide</a>
+<a href="#brand-story" class="btn btn-primary" data-i18n="brand-story.cta">Explore the Design System</a>
+<a href="#vi" class="btn btn-outline" data-i18n="nav.vi-guide">View VI Guide</a>
 </div>
 </div>
 <div class="hero-deco"></div>
@@ -401,13 +403,13 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <section id="brand-story">
 <div class="brand-card">
 <div class="inner">
-<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span>BRAND STORY</span><h2 class="sec-title">SDS · Seeedstudio<br>Design System</h2></div>
-<p class="brand-desc">SDS (Seeedstudio Design System) is the core framework of Seeedstudio's brand design system, providing consistent design language and visual standards for all products, marketing, and user experiences.</p>
+<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="brand-story.label">BRAND STORY</span></span><h2 class="sec-title" data-i18n="brand-story.title">SDS · Seeedstudio<br>Design System</h2></div>
+<p class="brand-desc" data-i18n="brand-story.desc">SDS (Seeedstudio Design System) is the core framework of Seeedstudio's brand design system, providing consistent design language and visual standards for all products, marketing, and user experiences.</p>
 <div class="brand-anchors">
-<a href="#projects" class="ba-link">Design-Driven Practice</a>
-<a href="#widgets" class="ba-link">Ready-to-Use Design Tools</a>
-<a href="#tools" class="ba-link">AI-Powered Design Workflows</a>
-<a href="#vi" class="ba-link">Brand Visual Identity System</a>
+<a href="#projects" class="ba-link" data-i18n="key-projects.title">Design-Driven Practice</a>
+<a href="#widgets" class="ba-link" data-i18n="widgets.title">Ready-to-Use Design Tools</a>
+<a href="#tools" class="ba-link" data-i18n="design-tools.title">AI-Powered Design Workflows</a>
+<a href="#vi" class="ba-link" data-i18n="vi-guide.title">Brand Visual Identity System</a>
 </div>
 </div>
 </div>
@@ -415,49 +417,49 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 
 <!-- ── SECTION 2 ── -->
 <section id="projects">
-<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span>01 · KEY PROJECTS</span><h2 class="sec-title">Design-Driven Practice</h2><p class="sec-desc">From spatial experiences to product details, design thinking runs through every key project, shaping the authentic perception of the brand.</p></div>
+<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="key-projects.label">01 · KEY PROJECTS</span></span><h2 class="sec-title" data-i18n="key-projects.title">Design-Driven Practice</h2><p class="sec-desc" data-i18n="key-projects.desc">From spatial experiences to product details, design thinking runs through every key project, shaping the authentic perception of the brand.</p></div>
 <div class="proj-grid">
 <div class="proj-track" id="projTrack">
 <div class="proj-card" onclick="window.location.href='projects/hq-showroom.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/0001.png" alt="HQ Showroom" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">SPACE DESIGN</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>HQ Showroom</h3><p>Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.hq-showroom">HQ Showroom</h3><p data-i18n="project.hq-showroom.desc">Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/mf-brand-upgrade.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/mf_0.png" alt="Maker Faire Shenzhen" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MAKER FAIRE</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>Maker Faire Shenzhen</h3><p>Since 2012, connecting Shenzhen's local hardware ecosystem with the global tech community.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.maker-faire">Maker Faire Shenzhen</h3><p data-i18n="project.maker-faire.desc">Since 2012, connecting Shenzhen's local hardware ecosystem with the global tech community.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/chaihuo-maker-space.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/signage_2.png" alt="AI Signage" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">AI INTERACTION</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>AI Interactive Signage</h3><p>When a can gets AI inspiration — from color recognition to dream-scape generation, an intelligent beverage recommender that reads your emotions.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.ai-signage">AI Interactive Signage</h3><p data-i18n="project.ai-signage.desc">When a can gets AI inspiration — from color recognition to dream-scape generation, an intelligent beverage recommender that reads your emotions.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/souvenir-collection.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/souvenir_1.png" alt="Souvenir Collection" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MERCHANDISE</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>Souvenir Collection</h3><p>Inspired by engineer culture, a series of branded merchandise that embodies the Seeedstudio spirit.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.souvenir">The Physical Form of Inspiration</h3><p data-i18n="project.souvenir.desc">Brand Memorabilia — a tangible extension of brand culture, translating abstract concepts into everyday objects that can be touched and used.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/product-video.html'" style="cursor:pointer">
 <div class="p-img"><video src="projects/assets/banner-video.webm" muted playsinline loop style="width:100%;height:100%;object-fit:cover" onmouseover="this.play()" onmouseout="this.pause()"></video><div class="p-deco">SHOWREEL</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>Product Showreel</h3><p>Cinematic visual storytelling redefining industrial aesthetics — four films showcasing the fusion of technology, design, and maker spirit.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.showreel">Product Showreel</h3><p data-i18n="project.showreel.desc">Cinematic visual storytelling redefining industrial aesthetics — four films showcasing the fusion of technology, design, and maker spirit.</p></div></div>
 </div>
 <!-- duplicate for seamless loop -->
 <div class="proj-card" onclick="window.location.href='projects/hq-showroom.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/0001.png" alt="HQ Showroom" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">SPACE DESIGN</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>HQ Showroom</h3><p>Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.hq-showroom">HQ Showroom</h3><p data-i18n="project.hq-showroom.desc">Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/mf-brand-upgrade.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/mf_0.png" alt="Maker Faire Shenzhen" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MAKER FAIRE</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>Maker Faire Shenzhen</h3><p>Since 2012, connecting Shenzhen's local hardware ecosystem with the global tech community.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.maker-faire">Maker Faire Shenzhen</h3><p data-i18n="project.maker-faire.desc">Since 2012, connecting Shenzhen's local hardware ecosystem with the global tech community.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/chaihuo-maker-space.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/signage_2.png" alt="AI Signage" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">AI INTERACTION</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>AI Interactive Signage</h3><p>When a can gets AI inspiration — from color recognition to dream-scape generation, an intelligent beverage recommender that reads your emotions.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.ai-signage">AI Interactive Signage</h3><p data-i18n="project.ai-signage.desc">When a can gets AI inspiration — from color recognition to dream-scape generation, an intelligent beverage recommender that reads your emotions.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/souvenir-collection.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/souvenir_1.png" alt="Souvenir Collection" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MERCHANDISE</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>Souvenir Collection</h3><p>Inspired by engineer culture, a series of branded merchandise that embodies the Seeedstudio spirit.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.souvenir">The Physical Form of Inspiration</h3><p data-i18n="project.souvenir.desc">Brand Memorabilia — a tangible extension of brand culture, translating abstract concepts into everyday objects that can be touched and used.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/product-video.html'" style="cursor:pointer">
 <div class="p-img"><video src="projects/assets/banner-video.webm" muted playsinline loop style="width:100%;height:100%;object-fit:cover" onmouseover="this.play()" onmouseout="this.pause()"></video><div class="p-deco">SHOWREEL</div></div>
-<div class="p-body"><div class="p-body-inner"><h3>Product Showreel</h3><p>Cinematic visual storytelling redefining industrial aesthetics — four films showcasing the fusion of technology, design, and maker spirit.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.showreel">Product Showreel</h3><p data-i18n="project.showreel.desc">Cinematic visual storytelling redefining industrial aesthetics — four films showcasing the fusion of technology, design, and maker spirit.</p></div></div>
 </div>
 </div>
 </div>
@@ -467,17 +469,17 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <section id="widgets">
 <div class="widget-wrap">
 <div class="widget-intro reveal">
-<div class="sec-head"><span class="sec-num"><span class="num-bar"></span>02 · WIDGETS</span><h2 class="sec-title">Ready-to-Use<br>Design Tools</h2><p class="sec-desc">A growing collection of productivity tools to help designers and collaborators complete daily tasks quickly.</p></div>
+<div class="sec-head"><span class="sec-num"><span class="num-bar"></span><span data-i18n="widgets.label">02 · WIDGETS</span></span><h2 class="sec-title" data-i18n="widgets.title">Ready-to-Use<br>Design Tools</h2><p class="sec-desc" data-i18n="widgets.desc">A growing collection of productivity tools to help designers and collaborators complete daily tasks quickly.</p></div>
 </div>
 <div class="widget-grid reveal">
 <a href="https://gemini.google.com/share/82a49567d189?skid=b38213b1-a3f5-4cd3-9845-2add236a6255" target="_blank" class="w-card">
-  <div class="w-body"><h4>AI Banner Copy Editor</h4><p>Modify text and copy within banners and promotional images using natural language prompts.</p></div>
+  <div class="w-body"><h4 data-i18n="widget.ai-banner">AI Banner Copy Editor</h4><p data-i18n="widget.ai-banner.desc">Modify text and copy within banners and promotional images using natural language prompts.</p></div>
 </a>
 <a href="https://share.gemini.google/hzmbrZYgOTEv" target="_blank" class="w-card">
-  <div class="w-body"><h4>Product Image Library</h4><p>Collaboratively upload and share high-quality product PNG images across teams.</p></div>
+  <div class="w-body"><h4 data-i18n="widget.image-library">Product Image Library</h4><p data-i18n="widget.image-library.desc">Collaboratively upload and share high-quality product PNG images across teams.</p></div>
 </a>
 <a href="https://share.gemini.google/92hELvsGalDg" target="_blank" class="w-card">
-  <div class="w-body"><h4>Image Compressor</h4><p>Lossless extreme compression tool to optimize product and promotional images.</p></div>
+  <div class="w-body"><h4 data-i18n="widget.image-compressor">Image Compressor</h4><p data-i18n="widget.image-compressor.desc">Lossless extreme compression tool to optimize product and promotional images.</p></div>
 </a>
 </div>
 </div>
@@ -485,22 +487,22 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 
 <!-- ── SECTION 4 ── -->
 <section id="tools">
-<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span>03 · DESIGN TOOLS</span><h2 class="sec-title">AI-Powered Design Workflows</h2><p class="sec-desc">Practical AI tools and workflows for image generation, video production, and brand visual asset creation — making design faster and more accessible.</p></div>
+<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="design-tools.label">03 · DESIGN TOOLS</span></span><h2 class="sec-title" data-i18n="design-tools.title">AI-Powered Design Workflows</h2><p class="sec-desc" data-i18n="design-tools.desc">Practical AI tools and workflows for image generation, video production, and brand visual asset creation — making design faster and more accessible.</p></div>
 <div class="tools-wrap">
 <div class="tools-grid">
-<a href="projects/ai-detail-page.html" class="t-card reveal" style="text-decoration:none;color:inherit;display:block"><div class="t-thumb"><img src="projects/assets/AI Product Detail Page.png" alt="AI Product Detail Page" style="width:100%;height:100%;object-fit:cover"></div><div class="t-info"><h4>AI Product Detail Page</h4><p>Leverage AI image generation to efficiently produce e-commerce product detail page visuals — from concept to final output.</p><div class="t-meta"><span>🤖 AI</span><span>Image Gen</span><span>PDF</span></div></div></a>
-<a href="projects/ai-video-workflow.html" class="t-card reveal" style="text-decoration:none;color:inherit;display:block"><div class="t-thumb"><img src="projects/assets/Video Workflow · Jimeng Seedance 2.0.png" alt="Video Workflow · Jimeng Seedance 2.0" style="width:100%;height:100%;object-fit:cover"></div><div class="t-info"><h4>Video Workflow · Jimeng Seedance 2.0</h4><p>A complete AI video generation pipeline built on Jimeng Seedance 2.0 — from creative ideation to polished final output.</p><div class="t-meta"><span>🎬 AI</span><span>Video</span><span>PDF</span></div></div></a>
-<a href="projects/gaoding-ai-image.html" class="t-card reveal" style="text-decoration:none;color:inherit;display:block"><div class="t-thumb"><img src="projects/assets/Gaoding AI Image Generation.png" alt="Gaoding AI Image Generation" style="width:100%;height:100%;object-fit:cover"></div><div class="t-info"><h4>Gaoding AI Image Generation</h4><p>Rapidly produce brand marketing visuals with Gaoding AI — covering e-commerce banners, social media graphics, campaign posters, and more.</p><div class="t-meta"><span>🖼️ AI</span><span>Image Gen</span><span>PDF</span></div></div></a>
+<a href="projects/ai-detail-page.html" class="t-card reveal" style="text-decoration:none;color:inherit;display:block"><div class="t-thumb"><img src="projects/assets/AI Product Detail Page.png" alt="AI Product Detail Page" style="width:100%;height:100%;object-fit:cover"></div><div class="t-info"><h4 data-i18n="tool.ai-detail">AI Product Detail Page</h4><p data-i18n="tool.ai-detail.desc">Leverage AI image generation to efficiently produce e-commerce product detail page visuals — from concept to final output.</p><div class="t-meta"><span>🤖 AI</span><span>Image Gen</span><span>PDF</span></div></div></a>
+<a href="projects/ai-video-workflow.html" class="t-card reveal" style="text-decoration:none;color:inherit;display:block"><div class="t-thumb"><img src="projects/assets/Video Workflow · Jimeng Seedance 2.0.png" alt="Video Workflow · Jimeng Seedance 2.0" style="width:100%;height:100%;object-fit:cover"></div><div class="t-info"><h4 data-i18n="tool.video-workflow">Video Workflow · Jimeng Seedance 2.0</h4><p data-i18n="tool.video-workflow.desc">A complete AI video generation pipeline built on Jimeng Seedance 2.0 — from creative ideation to polished final output.</p><div class="t-meta"><span>🎬 AI</span><span>Video</span><span>PDF</span></div></div></a>
+<a href="projects/gaoding-ai-image.html" class="t-card reveal" style="text-decoration:none;color:inherit;display:block"><div class="t-thumb"><img src="projects/assets/Gaoding AI Image Generation.png" alt="Gaoding AI Image Generation" style="width:100%;height:100%;object-fit:cover"></div><div class="t-info"><h4 data-i18n="tool.gaoding">Gaoding AI Image Generation</h4><p data-i18n="tool.gaoding.desc">Rapidly produce brand marketing visuals with Gaoding AI — covering e-commerce banners, social media graphics, campaign posters, and more.</p><div class="t-meta"><span>🖼️ AI</span><span>Image Gen</span><span>PDF</span></div></div></a>
 </div>
 </div>
 </section>
 
 <!-- ── SECTION 5 ── -->
 <section id="vi">
-<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span>04 · VI GUIDELINES</span><h2 class="sec-title">Brand Visual Identity System</h2><p class="sec-desc">Complete brand visual guidelines ensuring consistent, professional brand expression across all touchpoints.</p></div>
+<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="vi-guide.label">04 · VI GUIDELINES</span></span><h2 class="sec-title" data-i18n="vi-guide.title">Brand Visual Identity System</h2><p class="sec-desc" data-i18n="vi-guide.desc">Complete brand visual guidelines ensuring consistent, professional brand expression across all touchpoints.</p></div>
 <div class="vi-intro reveal">
-<div class="vi-cta"><h3>Download the Full VI Manual</h3><p>Covers logo usage, color system, typography, iconography, and application guidelines — a complete visual identity system for internal teams and external partners.</p><p style="margin-top:6px;font-size:13px;color:var(--gray)">v2.0 · PDF · 29 pages</p><a class="vi-dl" href="projects/Brief_SEEED STUDIO VISUAL IDENTITY GUIDE.pdf" download>↓ Download VI Manual (PDF)</a></div>
-<div><p style="color:var(--gray);font-size:14px;line-height:1.9;"><strong style="color:var(--dark);">VI (Visual Identity)</strong> defines how Seeedstudio is visually recognized and communicated. Every rule is carefully crafted to ensure consistency and professionalism.</p></div>
+<div class="vi-cta"><h3 data-i18n="vi-guide.download-title">Download the Full VI Manual</h3><p data-i18n="vi-guide.download-desc">Covers logo usage, color system, typography, iconography, and application guidelines — a complete visual identity system for internal teams and external partners.</p><p style="margin-top:6px;font-size:13px;color:var(--gray)">v2.0 · PDF · 29 pages</p><a class="vi-dl" href="projects/Brief_SEEED STUDIO VISUAL IDENTITY GUIDE.pdf" download data-i18n="vi-guide.download-btn">↓ Download VI Manual (PDF)</a></div>
+<div><p style="color:var(--gray);font-size:14px;line-height:1.9;" data-i18n="vi-guide.side-text"><strong style="color:var(--dark);">VI (Visual Identity)</strong> defines how Seeedstudio is visually recognized and communicated. Every rule is carefully crafted to ensure consistency and professionalism.</p></div>
 </div>
 </section>
 
@@ -508,22 +510,22 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <div class="footer-inner">
 <div class="footer-main">
 <div class="footer-brand">
-<div class="footer-kicker"><span class="footer-dot"></span>Live Design System</div>
+<div class="footer-kicker"><span class="footer-dot"></span><span data-i18n="footer.kicker">Live Design System</span></div>
 <div class="fl">SDS<small>Seeedstudio Design System</small></div>
-<p class="footer-copy">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.</p>
+<p class="footer-copy" data-i18n="footer.desc">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.</p>
 </div>
 <div>
-<div class="footer-title">Explore</div>
-<div class="flinks"><a href="#brand-story">Brand Story</a><a href="#projects">Key Projects</a><a href="#widgets">Widgets</a><a href="#tools">Design Tools</a><a href="#vi">VI Guide</a></div>
+<div class="footer-title" data-i18n="footer.explore">Explore</div>
+<div class="flinks"><a href="#brand-story" data-i18n="footer.brand-story">Brand Story</a><a href="#projects" data-i18n="footer.key-projects">Key Projects</a><a href="#widgets" data-i18n="footer.widgets">Widgets</a><a href="#tools" data-i18n="footer.design-tools">Design Tools</a><a href="#vi" data-i18n="footer.vi-guide">VI Guide</a></div>
 </div>
 <div>
-<div class="footer-title">System Status</div>
-<div class="footer-meta"><span>Version<strong>2026</strong></span><span>Scope<strong>Brand + Product</strong></span><span>Mode<strong>Continuously Evolving</strong></span></div>
+<div class="footer-title" data-i18n="footer.status">System Status</div>
+<div class="footer-meta"><span data-i18n="footer.version">Version<strong>2026</strong></span><span data-i18n="footer.scope">Scope<strong>Brand + Product</strong></span><span data-i18n="footer.mode">Mode<strong data-i18n="footer.mode-val">Continuously Evolving</strong></span></div>
 </div>
 </div>
 <div class="footer-bottom">
-<p class="cr">© 2026 Seeedstudio · Brand Design System</p>
-<div class="footer-mark">Built for clearer collaboration</div>
+<p class="cr" data-i18n="footer.copyright">© 2026 Seeedstudio · Brand Design System</p>
+<div class="footer-mark" data-i18n="footer.built">Built for clearer collaboration</div>
 </div>
 </div>
 </footer>
@@ -955,6 +957,6 @@ void main() {
   update();
 })();
 </script>
+<script src="i18n.js"></script>
 
 </body>
-</html>
