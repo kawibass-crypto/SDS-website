@@ -4,7 +4,7 @@ echo ═════════════════════════
 echo    SDS · 一键部署
 echo ════════════════════════════════════════
 
-git add index.html
+git add .
 git commit -m "自动更新页面"
 git push
 
