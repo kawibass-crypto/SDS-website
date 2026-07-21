@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SDS · Seeedstudio Brand Design System</title>
+<title>SDS · Seeed Studio Brand Design System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
@@ -87,7 +87,7 @@ body::before{
 @keyframes pulse-dot{0%,100%{opacity:.4}50%{opacity:1}}
 .hero h1,.hero-title{font-size:clamp(44px,9vw,100px);font-weight:800;color:var(--dark);line-height:1.05;letter-spacing:-3px;margin-bottom:8px;text-align:center;width:100%;margin-left:auto;margin-right:auto}
 .hero h1 .line{display:block;color:var(--dark);text-align:center;width:100%;margin:0 auto}
-.split-word{display:inline-block;white-space:nowrap}
+.split-word{display:inline-block !important;white-space:nowrap !important}
 .split-char{display:inline-block;will-change:transform,opacity}
 .hero-title .word{display:inline-block;will-change:transform,filter,opacity}
 .hero p{font-size:18px;color:rgba(0,0,0,0.4);max-width:760px;margin:16px auto 36px;line-height:1.8;font-weight:400}
@@ -388,9 +388,9 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <canvas id="hero-canvas"></canvas>
 <div class="hero-overlay"></div>
 <div class="hero-content reveal">
-<div class="hero-badge"><span class="dot"></span>SEEEDSTUDIO DESIGN SYSTEM v2.0</div>
-<h1 id="hero-title" class="hero-title" data-i18n="hero.title"><span class="line">Seeedstudio Design System</span></h1>
-<p data-i18n="hero.desc">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.</p>
+<div class="hero-badge"><span class="dot"></span>SEEED STUDIO DESIGN SYSTEM v2.0</div>
+<h1 id="hero-title" class="hero-title"><span class="line" data-i18n="hero.title">Seeed Studio Design System</span></h1>
+<p data-i18n="hero.desc">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeed Studio teams.</p>
 <div class="hero-actions">
 <a href="#brand-story" class="btn btn-primary" data-i18n="brand-story.cta">Explore the Design System</a>
 <a href="#vi" class="btn btn-outline" data-i18n="nav.vi-guide">View VI Guide</a>
@@ -403,8 +403,8 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <section id="brand-story">
 <div class="brand-card">
 <div class="inner">
-<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="brand-story.label">BRAND STORY</span></span><h2 class="sec-title" data-i18n="brand-story.title">SDS · Seeedstudio<br>Design System</h2></div>
-<p class="brand-desc" data-i18n="brand-story.desc">SDS (Seeedstudio Design System) is the core framework of Seeedstudio's brand design system, providing consistent design language and visual standards for all products, marketing, and user experiences.</p>
+<div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="brand-story.label">BRAND STORY</span></span><h2 class="sec-title" data-i18n="brand-story.title">SDS · Seeed Studio<br>Design System</h2></div>
+<p class="brand-desc" data-i18n="brand-story.desc">SDS (Seeed Studio Design System) is the core framework of Seeed Studio's brand design system, providing consistent design language and visual standards for all products, marketing, and user experiences.</p>
 <div class="brand-anchors">
 <a href="#projects" class="ba-link" data-i18n="key-projects.title">Design-Driven Practice</a>
 <a href="#widgets" class="ba-link" data-i18n="widgets.title">Ready-to-Use Design Tools</a>
@@ -422,7 +422,7 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <div class="proj-track" id="projTrack">
 <div class="proj-card" onclick="window.location.href='projects/hq-showroom.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/0001.png" alt="HQ Showroom" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">SPACE DESIGN</div></div>
-<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.hq-showroom">HQ Showroom</h3><p data-i18n="project.hq-showroom.desc">Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.hq-showroom">HQ Showroom</h3><p data-i18n="project.hq-showroom.desc">Seeed Studio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/mf-brand-upgrade.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/mf_0.png" alt="Maker Faire Shenzhen" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MAKER FAIRE</div></div>
@@ -443,7 +443,7 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <!-- duplicate for seamless loop -->
 <div class="proj-card" onclick="window.location.href='projects/hq-showroom.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/0001.png" alt="HQ Showroom" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">SPACE DESIGN</div></div>
-<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.hq-showroom">HQ Showroom</h3><p data-i18n="project.hq-showroom.desc">Seeedstudio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
+<div class="p-body"><div class="p-body-inner"><h3 data-i18n="project.hq-showroom">HQ Showroom</h3><p data-i18n="project.hq-showroom.desc">Seeed Studio's headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.</p></div></div>
 </div>
 <div class="proj-card" onclick="window.location.href='projects/mf-brand-upgrade.html'" style="cursor:pointer">
 <div class="p-img"><img src="projects/assets/mf_0.png" alt="Maker Faire Shenzhen" style="width:100%;height:100%;object-fit:cover;display:block"><div class="p-deco">MAKER FAIRE</div></div>
@@ -502,7 +502,7 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <div class="sec-head reveal"><span class="sec-num"><span class="num-bar"></span><span data-i18n="vi-guide.label">04 · VI GUIDELINES</span></span><h2 class="sec-title" data-i18n="vi-guide.title">Brand Visual Identity System</h2><p class="sec-desc" data-i18n="vi-guide.desc">Complete brand visual guidelines ensuring consistent, professional brand expression across all touchpoints.</p></div>
 <div class="vi-intro reveal">
 <div class="vi-cta"><h3 data-i18n="vi-guide.download-title">Download the Full VI Manual</h3><p data-i18n="vi-guide.download-desc">Covers logo usage, color system, typography, iconography, and application guidelines — a complete visual identity system for internal teams and external partners.</p><p style="margin-top:6px;font-size:13px;color:var(--gray)">v2.0 · PDF · 29 pages</p><a class="vi-dl" href="projects/Brief_SEEED STUDIO VISUAL IDENTITY GUIDE.pdf" download data-i18n="vi-guide.download-btn">↓ Download VI Manual (PDF)</a></div>
-<div><p style="color:var(--gray);font-size:14px;line-height:1.9;" data-i18n="vi-guide.side-text"><strong style="color:var(--dark);">VI (Visual Identity)</strong> defines how Seeedstudio is visually recognized and communicated. Every rule is carefully crafted to ensure consistency and professionalism.</p></div>
+<div><p style="color:var(--gray);font-size:14px;line-height:1.9;" data-i18n="vi-guide.side-text"><strong style="color:var(--dark);">VI (Visual Identity)</strong> defines how Seeed Studio is visually recognized and communicated. Every rule is carefully crafted to ensure consistency and professionalism.</p></div>
 </div>
 </section>
 
@@ -511,8 +511,8 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <div class="footer-main">
 <div class="footer-brand">
 <div class="footer-kicker"><span class="footer-dot"></span><span data-i18n="footer.kicker">Live Design System</span></div>
-<div class="fl">SDS<small>Seeedstudio Design System</small></div>
-<p class="footer-copy" data-i18n="footer.desc">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.</p>
+<div class="fl">SDS<small>Seeed Studio Design System</small></div>
+<p class="footer-copy" data-i18n="footer.desc">A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeed Studio teams.</p>
 </div>
 <div>
 <div class="footer-title" data-i18n="footer.explore">Explore</div>
@@ -524,7 +524,7 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 </div>
 </div>
 <div class="footer-bottom">
-<p class="cr" data-i18n="footer.copyright">© 2026 Seeedstudio · Brand Design System</p>
+<p class="cr" data-i18n="footer.copyright">© 2026 Seeed Studio · Brand Design System</p>
 <div class="footer-mark" data-i18n="footer.built">Built for clearer collaboration</div>
 </div>
 </div>
@@ -609,7 +609,15 @@ function initHeroTitleAnimation(options = {}){
   let animationCompleted = false;
 
   const startWhenReady = () => {
-    const lines = Array.from(h.querySelectorAll('.line'));
+    let lines = Array.from(h.querySelectorAll('.line'));
+    if (lines.length === 0) {
+      const lineSpan = document.createElement('span');
+      lineSpan.className = 'line';
+      lineSpan.innerHTML = h.innerHTML;
+      h.innerHTML = '';
+      h.appendChild(lineSpan);
+      lines = [lineSpan];
+    }
     lines.forEach(line=>{
       const text = line.textContent || '';
       line.innerHTML = '';

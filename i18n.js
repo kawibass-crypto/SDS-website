@@ -11,14 +11,14 @@ const I18N = {
     'nav.toggle': 'EN',
 
     // Hero
-    'hero.title': 'Seeedstudio Design System',
-    'hero.subtitle': 'Seeedstudio 品牌设计系统',
+    'hero.title': 'Seeed Studio Design System',
+    'hero.subtitle': 'Seeed Studio 品牌设计系统',
     'hero.desc': '一个为产品叙事、品牌表达、可复用资产和实用设计工作流而生的共享基础体系。',
 
     // Brand Story
     'brand-story.label': '品牌故事',
     'brand-story.title': 'SDS 品牌设计系统',
-    'brand-story.desc': 'SDS (Seeedstudio Design System) 是 Seeedstudio 品牌设计系统的核心框架，为所有产品、营销和用户体验提供统一的设计语言和视觉标准。',
+    'brand-story.desc': 'SDS (Seeed Studio Design System) 是 Seeed Studio 品牌设计系统的核心框架，为所有产品、营销和用户体验提供统一的设计语言和视觉标准。',
     'brand-story.cta': '探索设计系统',
 
     // Section 01 — Key Projects
@@ -28,7 +28,7 @@ const I18N = {
 
     // Project cards
     'project.hq-showroom': '总部展厅',
-    'project.hq-showroom.desc': 'Seeedstudio 总部展厅改造，通过沉浸式空间叙事融合品牌体验与产品展示。',
+    'project.hq-showroom.desc': 'Seeed Studio 总部展厅改造，通过沉浸式空间叙事融合品牌体验与产品展示。',
     'project.maker-faire': 'Maker Faire Shenzhen',
     'project.maker-faire.desc': '自 2012 年起，连接深圳本地硬件生态与全球科技社区。',
     'project.ai-signage': 'AI 交互标牌',
@@ -67,18 +67,18 @@ const I18N = {
     'vi-guide.download-title': '下载完整 VI 手册',
     'vi-guide.download-desc': '涵盖 Logo 使用、色彩系统、字体排印、图标系统及应用指南——为内部团队和外部合作伙伴提供完整的视觉识别体系。',
     'vi-guide.download-btn': '↓ 下载 VI 手册 (PDF)',
-    'vi-guide.side-text': '<strong>VI（视觉识别）</strong>定义了 Seeedstudio 如何被视觉识别和传播。每一条规则都经过精心设计，以确保一致性和专业性。',
+    'vi-guide.side-text': '<strong>VI（视觉识别）</strong>定义了 Seeed Studio 如何被视觉识别和传播。每一条规则都经过精心设计，以确保一致性和专业性。',
 
     // Footer
     'footer.kicker': '实时设计系统',
-    'footer.desc': '一个为产品叙事、品牌表达、可复用资产和实用设计工作流而设的共享基础体系，贯穿 Seeedstudio 各团队。',
+    'footer.desc': '一个为产品叙事、品牌表达、可复用资产和实用设计工作流而设的共享基础体系，贯穿 Seeed Studio 各团队。',
     'footer.explore': '浏览',
     'footer.status': '系统状态',
     'footer.version': '版本',
     'footer.scope': '范围',
     'footer.mode': '模式',
     'footer.mode-val': '持续演进',
-    'footer.copyright': '© 2026 Seeedstudio · 品牌设计系统',
+    'footer.copyright': '© 2026 Seeed Studio · 品牌设计系统',
     'footer.built': '为更清晰的协作而建',
     'footer.brand-story': '品牌故事',
     'footer.key-projects': '重点项目',
@@ -95,13 +95,13 @@ const I18N = {
     'nav.vi-guide': 'VI Guide',
     'nav.toggle': '中文',
 
-    'hero.title': 'Seeedstudio Design System',
-    'hero.subtitle': 'Seeedstudio Design System',
-    'hero.desc': 'A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.',
+    'hero.title': 'Seeed Studio Design System',
+    'hero.subtitle': 'Seeed Studio Design System',
+    'hero.desc': 'A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeed Studio teams.',
 
     'brand-story.label': 'BRAND STORY',
     'brand-story.title': 'SDS Brand Design System',
-    'brand-story.desc': 'SDS (Seeedstudio Design System) is the core framework of Seeedstudio\'s brand design system, providing consistent design language and visual standards for all products, marketing, and user experiences.',
+    'brand-story.desc': 'SDS (Seeed Studio Design System) is the core framework of Seeed Studio\'s brand design system, providing consistent design language and visual standards for all products, marketing, and user experiences.',
     'brand-story.cta': 'Explore the Design System',
 
     'key-projects.label': '01 · KEY PROJECTS',
@@ -109,7 +109,7 @@ const I18N = {
     'key-projects.desc': 'From spatial experiences to product details, design thinking runs through every key project, shaping the authentic perception of the brand.',
 
     'project.hq-showroom': 'HQ Showroom',
-    'project.hq-showroom.desc': 'Seeedstudio\'s headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.',
+    'project.hq-showroom.desc': 'Seeed Studio\'s headquarters showroom redesign, blending brand experience with product display through immersive spatial storytelling.',
     'project.maker-faire': 'Maker Faire Shenzhen',
     'project.maker-faire.desc': 'Since 2012, connecting Shenzhen\'s local hardware ecosystem with the global tech community.',
     'project.ai-signage': 'AI Interactive Signage',
@@ -145,17 +145,17 @@ const I18N = {
     'vi-guide.download-title': 'Download the Full VI Manual',
     'vi-guide.download-desc': 'Covers logo usage, color system, typography, iconography, and application guidelines — a complete visual identity system for internal teams and external partners.',
     'vi-guide.download-btn': '↓ Download VI Manual (PDF)',
-    'vi-guide.side-text': '<strong>VI (Visual Identity)</strong> defines how Seeedstudio is visually recognized and communicated. Every rule is carefully crafted to ensure consistency and professionalism.',
+    'vi-guide.side-text': '<strong>VI (Visual Identity)</strong> defines how Seeed Studio is visually recognized and communicated. Every rule is carefully crafted to ensure consistency and professionalism.',
 
     'footer.kicker': 'Live Design System',
-    'footer.desc': 'A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeedstudio teams.',
+    'footer.desc': 'A shared foundation for product storytelling, brand expression, reusable assets, and practical design workflows across Seeed Studio teams.',
     'footer.explore': 'Explore',
     'footer.status': 'System Status',
     'footer.version': 'Version',
     'footer.scope': 'Scope',
     'footer.mode': 'Mode',
     'footer.mode-val': 'Continuously Evolving',
-    'footer.copyright': '© 2026 Seeedstudio · Brand Design System',
+    'footer.copyright': '© 2026 Seeed Studio · Brand Design System',
     'footer.built': 'Built for clearer collaboration',
     'footer.brand-story': 'Brand Story',
     'footer.key-projects': 'Key Projects',
