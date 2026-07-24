@@ -190,6 +190,9 @@ function applyI18n(lang) {
   const toggle = document.getElementById('lang-toggle');
   if (toggle) toggle.textContent = lang === 'zh' ? 'EN' : '中文';
   localStorage.setItem('sds-lang', lang);
+  if (typeof window.initHeroTitleAnimation === 'function') {
+    window.initHeroTitleAnimation();
+  }
 }
 
 // Toggle language
