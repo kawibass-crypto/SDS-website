@@ -75,8 +75,10 @@ const I18N = {
     'pdf-comp.c3-desc': '涵盖“视觉无损 (200DPI)”、“极佳平衡 (120DPI)”、“极限压缩 (90DPI)”及自定义调节，保持矢量文本与线条极度清晰。',
     'pdf-comp.c4-title': '免安装绿色桌面版',
     'pdf-comp.c4-desc': '提供 Windows 64位 Portable 解压即用包，适合离线环境、高频批量处理与内部共享。',
+    'pdf-comp.c5-title': '可视化 PDF 超链接编辑器',
+    'pdf-comp.c5-desc': '支持在 PDF 页面上拉框一键插入跳转超链接，自动换算点阵坐标并导出包含规范 PDF Link Annotations 的全新文档。',
     'pdf-comp.rel-title': '下载绿色免安装桌面版',
-    'pdf-comp.rel-desc': '下载完整编译的 Windows 绿色便携版应用 (PDF-Lossless-Studio-Portable-v1.0.zip)，解压即用，无需安装。',
+    'pdf-comp.rel-desc': '下载完整编译的 Windows 绿色便携版应用 (PDF-Lossless-Studio-Portable-v1.1.zip)，解压即用，无需安装。',
     'pdf-comp.quote-p1': '零云端上传，极至本地掌控与隐私保障。',
     'pdf-comp.quote-p2': '智能无损压缩，流畅极速阅读。',
 
@@ -191,8 +193,10 @@ const I18N = {
     'pdf-comp.c3-desc': 'Covers Visually Lossless (200DPI), Balanced (120DPI), Extreme (90DPI) & Custom modes with crisp vector typography.',
     'pdf-comp.c4-title': 'Portable Desktop App',
     'pdf-comp.c4-desc': 'Windows 64-bit portable package ready to extract and run offline for batch processing.',
+    'pdf-comp.c5-title': 'Visual PDF Hyperlink Editor',
+    'pdf-comp.c5-desc': 'Drag-to-select regions on PDF pages to inject clickable URLs with precise point coordinate mapping and PDF Link Annotations.',
     'pdf-comp.rel-title': 'Download Portable Desktop App',
-    'pdf-comp.rel-desc': 'Download compiled Windows portable package (PDF-Lossless-Studio-Portable-v1.0.zip), extract and run with zero setup.',
+    'pdf-comp.rel-desc': 'Download compiled Windows portable package (PDF-Lossless-Studio-Portable-v1.1.zip), extract and run with zero setup.',
     'pdf-comp.quote-p1': 'Zero cloud upload. Complete local control & privacy.',
     'pdf-comp.quote-p2': 'Compress smarter, read faster.',
 

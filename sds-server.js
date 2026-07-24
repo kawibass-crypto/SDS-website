@@ -5,7 +5,7 @@ const path = require('path');
 const PORT = 5501;
 
 const MIME_TYPES = {
-  '.html': 'text/html',
+  '.html': 'text/html; charset=utf-8',
   '.css': 'text/css',
   '.js': 'text/javascript',
   '.json': 'application/json',
@@ -14,6 +14,8 @@ const MIME_TYPES = {
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
+  '.zip': 'application/zip',
+  '.pdf': 'application/pdf',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
   '.ttf': 'font/ttf',
@@ -50,7 +52,14 @@ const server = http.createServer((req, res) => {
         res.end(`Internal Server Error: ${error.code}\n`);
       }
     } else {
-      res.writeHead(200, { 'Content-Type': contentType });
+      const headers = {
+        'Content-Type': contentType,
+        'Access-Control-Allow-Origin': '*'
+      };
+      if (extname === '.zip') {
+        headers['Content-Disposition'] = `attachment; filename="${path.basename(filePath)}"`;
+      }
+      res.writeHead(200, headers);
       res.end(content);
     }
   });
