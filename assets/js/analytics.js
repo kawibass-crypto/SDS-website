@@ -38,4 +38,36 @@
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", ANALYTICS_CONFIG.CLARITY_PROJECT_ID);
   }
+
+  // 3. Event Tracking Helpers (GA4)
+  window.sdsTrackEvent = function(eventName, params = {}) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    }
+  };
+
+  // Auto-bind click event tracking on download links and CTA buttons
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[download], .tool-download, .vi-dl').forEach(el => {
+      el.addEventListener('click', function() {
+        const href = el.getAttribute('href') || '';
+        const text = (el.textContent || '').trim();
+        window.sdsTrackEvent('file_download', { file_name: href, button_text: text });
+      });
+    });
+
+    document.querySelectorAll('.t-card, .w-card, .proj-card').forEach(el => {
+      el.addEventListener('click', function() {
+        const text = (el.textContent || '').trim().slice(0, 50);
+        window.sdsTrackEvent('select_content', { item_id: text });
+      });
+    });
+
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+      langBtn.addEventListener('click', function() {
+        window.sdsTrackEvent('toggle_language', { lang: document.documentElement.lang });
+      });
+    }
+  });
 })();
