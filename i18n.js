@@ -48,6 +48,8 @@ const I18N = {
     'widget.image-library.desc': '跨团队协作上传和分享高质量产品 PNG 图片。',
     'widget.image-compressor': '图片压缩器',
     'widget.image-compressor.desc': '无损极限压缩工具，优化产品和宣传图片。',
+    'widget.pdf-compressor': 'PDF 无损极限压缩 (PDF Lossless Studio)',
+    'widget.pdf-compressor.desc': '100% 本地隐私处理与极限瘦身工具，支持高清双重重采样与绿色桌面版。',
 
     // Section 03 — Design Tools
     'design-tools.label': '03 · 设计分享',
@@ -128,6 +130,8 @@ const I18N = {
     'widget.image-library.desc': 'Collaboratively upload and share high-quality product PNG images across teams.',
     'widget.image-compressor': 'Image Compressor',
     'widget.image-compressor.desc': 'Lossless extreme compression tool to optimize product and promotional images.',
+    'widget.pdf-compressor': 'PDF Lossless Studio',
+    'widget.pdf-compressor.desc': '100% local privacy PDF extreme compression tool with dual-engine resampling and portable desktop app support.',
 
     'design-tools.label': '03 · DESIGN SHARING',
     'design-tools.title': 'AI-Powered Design Workflows',
