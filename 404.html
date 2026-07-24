@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 · Page Not Found | Seeed Studio Design System</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"JetBrains Mono","PingFang SC",monospace;background:#0b0b1a;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.card{max-width:540px;width:100%;padding:48px 36px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:24px;backdrop-filter:blur(20px)}
+.num{font-size:96px;font-weight:800;line-height:1;background:linear-gradient(135deg,#beed35,#7aa310);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;letter-spacing:-4px}
+h1{font-size:22px;font-weight:700;margin-bottom:12px}
+p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;border-radius:12px;background:#beed35;color:#0b0b1a;font-weight:700;text-decoration:none;transition:all .3s;font-size:14px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(190,237,53,0.35)}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="num">404</div>
+<h1 data-i18n="404.title">页面未找到 / Page Not Found</h1>
+<p data-i18n="404.desc">抱歉，您访问的页面不存在或已被移动。<br>The page you are looking for does not exist or has been moved.</p>
+<a href="index.html" class="btn" data-i18n="404.btn">← 返回 SDS 首页 / Back to Home</a>
+</div>
+<script src="i18n.js?v=1784620039631"></script>
+</body>
+</html>

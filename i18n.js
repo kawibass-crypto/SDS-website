@@ -116,6 +116,11 @@ const I18N = {
     'footer.widgets': '工具集',
     'footer.design-tools': '设计工具',
     'footer.vi-guide': 'VI 指南',
+
+    // 404 Page
+    '404.title': '页面未找到',
+    '404.desc': '抱歉，您访问的页面不存在或已被移动。',
+    '404.btn': '← 返回 SDS 首页',
   },
   en: {
     'nav.home': 'Home',
@@ -224,6 +229,11 @@ const I18N = {
     'footer.widgets': 'Widgets',
     'footer.design-tools': 'Design Tools',
     'footer.vi-guide': 'VI Guide',
+
+    // 404 Page
+    '404.title': 'Page Not Found',
+    '404.desc': 'The page you are looking for does not exist or has been moved.',
+    '404.btn': '← Back to Home',
   }
 };
 
