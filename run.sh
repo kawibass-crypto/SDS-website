@@ -18,4 +18,4 @@ docker run --detach \
   --publish "${HOST_PORT}:80" \
   "$IMAGE_NAME"
 
-echo "Running at http://localhost:${HOST_PORT}"
+echo "Running at http://localhost:${HOST_PORT}/design-system/"

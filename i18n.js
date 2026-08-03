@@ -195,6 +195,11 @@ function toggleLang() {
   applyI18n(next);
 }
 
+// Keep the existing inline onclick="toggleLang()" handlers working after
+// Vite turns this file into an ES module.
+window.applyI18n = applyI18n;
+window.toggleLang = toggleLang;
+
 // Init
 (function() {
   const saved = localStorage.getItem('sds-lang') || 'en';
