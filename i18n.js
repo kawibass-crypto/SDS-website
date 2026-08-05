@@ -274,6 +274,10 @@ function toggleLang() {
   applyI18n(next);
 }
 
+// Expose to window for inline onclick handlers and module compatibility
+window.applyI18n = applyI18n;
+window.toggleLang = toggleLang;
+
 // Init
 (function() {
   const saved = localStorage.getItem('sds-lang') || 'en';
