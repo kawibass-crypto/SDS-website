@@ -12,8 +12,8 @@
     // Google Analytics 4 Measurement ID (e.g., 'G-ABC123XYZ')
     GA_MEASUREMENT_ID: 'G-GCYPTEXK9L',
 
-    // Microsoft Clarity Project ID (e.g., 'k123456789')
-    CLARITY_PROJECT_ID: 'YOUR_CLARITY_PROJECT_ID'
+    // Microsoft Clarity Project ID
+    CLARITY_PROJECT_ID: 'xxjvlqv571'
   };
 
   // 1. Google Analytics 4 Integration
