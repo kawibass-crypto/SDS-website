@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kawibass-crypto.github.io/SDS-website/sitemap.xml

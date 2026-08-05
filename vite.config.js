@@ -9,7 +9,8 @@ function copyProjectDownloads() {
     'Brief_SEEED STUDIO VISUAL IDENTITY GUIDE.pdf',
     '稿定AI生图分享.pdf',
     '视频工作流_即梦Seedance 2.0 AI.pdf',
-    '详情页生成_AI生图.pdf'
+    '详情页生成_AI生图.pdf',
+    'PDF-Lossless-Studio-Portable-v1.1.zip'
   ];
 
   return {
@@ -17,12 +18,16 @@ function copyProjectDownloads() {
     async closeBundle() {
       const outputDirectory = resolve(root, 'dist/projects');
       await mkdir(outputDirectory, { recursive: true });
-      await Promise.all(downloads.map((filename) => (
-        copyFile(
-          resolve(root, 'projects', filename),
-          resolve(outputDirectory, filename)
-        )
-      )));
+      await Promise.all(downloads.map(async (filename) => {
+        try {
+          await copyFile(
+            resolve(root, 'projects', filename),
+            resolve(outputDirectory, filename)
+          );
+        } catch (err) {
+          // Skip if missing
+        }
+      }));
     }
   };
 }
@@ -41,6 +46,7 @@ export default defineConfig({
         'gaoding-ai-image': resolve(root, 'projects/gaoding-ai-image.html'),
         'hq-showroom': resolve(root, 'projects/hq-showroom.html'),
         'mf-brand-upgrade': resolve(root, 'projects/mf-brand-upgrade.html'),
+        'pdf-compressor': resolve(root, 'projects/pdf-compressor.html'),
         'product-video': resolve(root, 'projects/product-video.html'),
         'souvenir-collection': resolve(root, 'projects/souvenir-collection.html')
       }
