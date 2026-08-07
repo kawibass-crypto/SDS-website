@@ -365,6 +365,14 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
   }
 }
 </style>
+<script>
+window.toggleLang = window.toggleLang || function() {
+  if (typeof window.applyI18n === 'function') {
+    var current = document.documentElement.lang || 'en';
+    window.applyI18n(current === 'zh' ? 'en' : 'zh');
+  }
+};
+</script>
 </head>
 <body>
 
@@ -408,7 +416,7 @@ footer .footer-mark::before{content:'';width:28px;height:2px;border-radius:2px;b
 <li><a href="#widgets" data-i18n="nav.widgets">Widgets</a></li>
 <li><a href="#tools" data-i18n="nav.design-tools">Design Tools</a></li>
 <li><a href="#vi" data-i18n="nav.vi-guide">VI Guide</a></li>
-<li><button id="lang-toggle" onclick="toggleLang()" style="padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;background:var(--green);color:var(--dark);border:none;cursor:pointer;font-family:inherit;transition:all .3s" data-i18n="nav.toggle">中文</button></li>
+<li><button id="lang-toggle" onclick="window.toggleLang && window.toggleLang()" style="padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;background:var(--green);color:var(--dark);border:none;cursor:pointer;font-family:inherit;transition:all .3s" data-i18n="nav.toggle">中文</button></li>
 </ul>
 <div class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
@@ -998,7 +1006,27 @@ void main() {
   });
   update();
 })();
-</script>
 <script src="i18n.js?v=1784620039631"></script>
+<script>
+(function() {
+  function setupLangToggle() {
+    var btn = document.getElementById('lang-toggle');
+    if (btn) {
+      btn.addEventListener('click', function(e) {
+        if (typeof window.toggleLang === 'function') {
+          window.toggleLang();
+        } else if (typeof toggleLang === 'function') {
+          toggleLang();
+        }
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupLangToggle);
+  } else {
+    setupLangToggle();
+  }
+})();
+</script>
 
 </body>

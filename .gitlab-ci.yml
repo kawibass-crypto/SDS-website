@@ -1,0 +1,12 @@
+# GitLab CI/CD Configuration for SDS Website
+
+stages:
+  - build
+
+build_docker:
+  stage: build
+  script:
+    - bash run.sh
+  only:
+    - main
+    - dev-young
