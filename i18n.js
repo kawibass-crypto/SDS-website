@@ -278,8 +278,25 @@ function toggleLang() {
 window.applyI18n = applyI18n;
 window.toggleLang = toggleLang;
 
-// Init
+// Init & Event Listener
 (function() {
   const saved = localStorage.getItem('sds-lang') || 'en';
   applyI18n(saved);
+
+  const bindToggle = function() {
+    const btn = document.getElementById('lang-toggle');
+    if (btn && !btn.dataset.bound) {
+      btn.dataset.bound = 'true';
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleLang();
+      });
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindToggle);
+  } else {
+    bindToggle();
+  }
 })();
