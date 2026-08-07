@@ -1,3 +1,5 @@
 projects/*.zip
 *.zip
 projects/PDF-Lossless-Studio-Portable-*/
+/node_modules
+dist
