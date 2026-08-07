@@ -32,10 +32,24 @@ function copyProjectDownloads() {
   };
 }
 
+function copyPublicAssets() {
+  const assets = ['i18n.js', 'favicon.svg', 'robots.txt', 'sitemap.xml', 'site.webmanifest', '404.html'];
+  return {
+    name: 'copy-public-assets',
+    async closeBundle() {
+      await Promise.all(assets.map(async (filename) => {
+        try {
+          await copyFile(resolve(root, filename), resolve(root, 'dist', filename));
+        } catch (err) {}
+      }));
+    }
+  };
+}
+
 export default defineConfig({
   // The public site is exposed by the reverse proxy at /design-system/.
   base: '/design-system/',
-  plugins: [copyProjectDownloads()],
+  plugins: [copyProjectDownloads(), copyPublicAssets()],
   build: {
     rollupOptions: {
       input: {

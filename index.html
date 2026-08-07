@@ -998,7 +998,27 @@ void main() {
   });
   update();
 })();
-</script>
 <script src="i18n.js?v=1784620039631"></script>
+<script>
+(function() {
+  function setupLangToggle() {
+    var btn = document.getElementById('lang-toggle');
+    if (btn) {
+      btn.addEventListener('click', function(e) {
+        if (typeof window.toggleLang === 'function') {
+          window.toggleLang();
+        } else if (typeof toggleLang === 'function') {
+          toggleLang();
+        }
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupLangToggle);
+  } else {
+    setupLangToggle();
+  }
+})();
+</script>
 
 </body>
