@@ -61,6 +61,7 @@ export default defineConfig({
         'hq-showroom': resolve(root, 'projects/hq-showroom.html'),
         'mf-brand-upgrade': resolve(root, 'projects/mf-brand-upgrade.html'),
         'pdf-compressor': resolve(root, 'projects/pdf-compressor.html'),
+        'svg-icon-exporter': resolve(root, 'projects/svg-icon-exporter/index.html'),
         'product-video': resolve(root, 'projects/product-video.html'),
         'souvenir-collection': resolve(root, 'projects/souvenir-collection.html')
       }

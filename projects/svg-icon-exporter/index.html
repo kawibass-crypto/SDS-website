@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG 图标生成与下载器 - Premium SVG Exporter</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Elements -->
+    <div class="glow-bg">
+        <div class="glow-sphere sphere-1"></div>
+        <div class="glow-sphere sphere-2"></div>
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <h1>SVG Vector Icon Exporter</h1>
+            </div>
+            <div class="theme-toggle" id="themeToggleBtn">
+                <span class="toggle-track">
+                    <span class="toggle-thumb"></span>
+                </span>
+                <span class="theme-label-text">深色模式</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="app-layout">
+            <!-- Sidebar: Controls -->
+            <section class="controls-panel card">
+                <h2 class="panel-title">自定义参数 / Configurations</h2>
+                
+                <div class="control-group">
+                    <label class="control-label">主要线条颜色 (Primary)</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="primaryColorPicker" value="#4E5868">
+                        <input type="text" id="primaryColorText" value="#4E5868" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">辅助高亮颜色 (Accent)</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="accentColorPicker" value="#A2D149">
+                        <input type="text" id="accentColorText" value="#A2D149" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">外圈圆环颜色 (Border)</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="borderColorPicker" value="#E4E7EC">
+                        <input type="text" id="borderColorText" value="#E4E7EC" maxlength="7">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="slider-header">
+                        <label class="control-label">线条粗细 (Stroke Width)</label>
+                        <span class="slider-value" id="strokeWidthValue">1.5 px</span>
+                    </div>
+                    <input type="range" id="strokeWidthSlider" min="1.0" max="4.0" step="0.1" value="1.5">
+                </div>
+
+                <div class="control-group">
+                    <div class="slider-header">
+                        <label class="control-label">导出尺寸 (Export Size)</label>
+                        <span class="slider-value" id="exportSizeValue">24 px</span>
+                    </div>
+                    <input type="range" id="exportSizeSlider" min="16" max="512" step="4" value="24">
+                </div>
+
+                <div class="control-group checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="showBorderCheckbox">
+                        <span class="checkmark-box"></span>
+                        显示外圈圆环
+                    </label>
+                </div>
+
+                <button id="resetBtn" class="btn btn-secondary">重置为默认值</button>
+            </section>
+
+            <!-- Main Content: Icons Grid -->
+            <section class="icons-grid-container">
+                <div class="grid-header">
+                    <div class="header-info">
+                        <h2>线性矢量图标集 / Linear Vector Icons</h2>
+                        <p>专为 dealers, retail channels, outdoor apps & brands 打造。点击卡片放大并查看代码，支持一键下载。</p>
+                    </div>
+                    <div class="header-actions">
+                        <div class="search-box">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="searchInput" placeholder="搜索图标或描述..." aria-label="搜索图标">
+                        </div>
+                        <button id="downloadAllBtn" class="btn btn-primary">
+                            <span class="btn-icon">📦</span>打包下载 (ZIP)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="categories-container">
+                    <!-- Distribution & Retail -->
+                    <div class="category-section" id="section-distribution">
+                        <div class="category-header">
+                            <span class="cat-tag tag-blue">Distribution & Retail</span>
+                            <h3 class="category-title">分销与零售渠道 / For dealers & retail channels</h3>
+                        </div>
+                        <div class="icons-grid" id="grid-distribution"></div>
+                    </div>
+
+                    <!-- Software & App Integration -->
+                    <div class="category-section" id="section-software">
+                        <div class="category-header">
+                            <span class="cat-tag tag-green">Software & Integration</span>
+                            <h3 class="category-title">软件与应用集成 / For outdoor apps & platforms</h3>
+                        </div>
+                        <div class="icons-grid" id="grid-software"></div>
+                    </div>
+
+                    <!-- Custom Solutions -->
+                    <div class="category-section" id="section-custom">
+                        <div class="category-header">
+                            <span class="cat-tag tag-purple">Custom Solutions</span>
+                            <h3 class="category-title">定制解决方案 / For brands & OEM</h3>
+                        </div>
+                        <div class="icons-grid" id="grid-custom"></div>
+                    </div>
+
+                    <!-- Hardware Features -->
+                    <div class="category-section" id="section-hardware-features">
+                        <div class="category-header">
+                            <span class="cat-tag tag-orange">Hardware Features</span>
+                            <h3 class="category-title">硬件特征 / For tracker hardware specs</h3>
+                        </div>
+                        <div class="icons-grid" id="grid-hardware-features"></div>
+                    </div>
+
+                    <!-- AI Computing Specs -->
+                    <div class="category-section" id="section-ai-computing">
+                        <div class="category-header">
+                            <span class="cat-tag tag-crimson">AI Computing</span>
+                            <h3 class="category-title">计算与AI模组卖点 / AI module specs</h3>
+                        </div>
+                        <div class="icons-grid" id="grid-ai-computing"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal for showing code -->
+    <div class="modal-backdrop" id="codeModal">
+        <div class="modal card">
+            <div class="modal-header">
+                <h3 id="modalIconTitle">SVG 源代码 / Source Code</h3>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-preview-box">
+                    <div id="modalIconPreview"></div>
+                </div>
+                <pre><code id="svgCodeDisplay"></code></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="copyModalBtn">复制到剪切板</button>
+                <button class="btn btn-primary" id="downloadModalBtn">下载 SVG 文件</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">复制成功！</div>
+
+    <!-- JSZip for zip exports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <footer>
+        <div class="container">
+            <p>Designed with ❤️ for modern vector graphics support. Color #4e5868.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

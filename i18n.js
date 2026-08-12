@@ -50,6 +50,8 @@ const I18N = {
     'widget.image-compressor.desc': '无损极限压缩工具，优化产品和宣传图片。',
     'widget.pdf-compressor': 'PDF 无损极限压缩 (PDF Lossless Studio)',
     'widget.pdf-compressor.desc': '100% 本地隐私处理与极限瘦身工具，支持高清双重重采样与绿色桌面版。',
+    'widget.svg-exporter': 'SVG 线性图标生成器 (SVG Vector Exporter)',
+    'widget.svg-exporter.desc': '专为硬件、分销及软件平台打造的线性 SVG 图标设计、自定义及批量打包导出工具。',
 
     // PDF Lossless Page
     'pdf-comp.badge': '⚡ 本地 PDF 压缩器',
@@ -168,6 +170,8 @@ const I18N = {
     'widget.image-compressor.desc': 'Lossless extreme compression tool to optimize product and promotional images.',
     'widget.pdf-compressor': 'PDF Lossless Studio',
     'widget.pdf-compressor.desc': '100% local privacy PDF extreme compression tool with dual-engine resampling and portable desktop app support.',
+    'widget.svg-exporter': 'SVG Vector Exporter',
+    'widget.svg-exporter.desc': 'Premium SVG icon designer, real-time customizer, and batch exporter for multi-platform products.',
 
     // PDF Lossless Page
     'pdf-comp.badge': '⚡ LOCAL PDF COMPRESSOR',
