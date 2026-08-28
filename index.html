@@ -831,14 +831,121 @@ function initHeroTitleAnimation(options = {}){
 }
 window.initHeroTitleAnimation = initHeroTitleAnimation;
 
-// initialize with BlurText parameters
+// ── Interactive Mesh Text Hover (Magnetic Elastic Sticky Text) ──
+let meshHoverAnimationId = null;
+let meshPointerMoveHandler = null;
+let meshMouseLeaveHandler = null;
+
+function initMeshTextHover() {
+  const container = document.getElementById('hero-title');
+  if (!container) return;
+
+  const chars = Array.from(container.querySelectorAll('.split-char'));
+  if (!chars.length) return;
+
+  if (meshHoverAnimationId) {
+    cancelAnimationFrame(meshHoverAnimationId);
+    meshHoverAnimationId = null;
+  }
+  if (meshPointerMoveHandler) {
+    window.removeEventListener('pointermove', meshPointerMoveHandler);
+  }
+  if (meshMouseLeaveHandler) {
+    document.removeEventListener('mouseleave', meshMouseLeaveHandler);
+  }
+
+  let mouse = { x: -9999, y: -9999 };
+  let isHovering = false;
+
+  const charStates = chars.map(el => {
+    el.style.position = 'relative';
+    el.style.display = 'inline-block';
+    el.style.willChange = 'transform, color, text-shadow';
+    return {
+      el,
+      x: 0, y: 0, scale: 1, rotate: 0,
+      targetX: 0, targetY: 0, targetScale: 1, targetRotate: 0,
+      colorT: 0, targetColorT: 0
+    };
+  });
+
+  meshPointerMoveHandler = (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+    isHovering = true;
+  };
+
+  meshMouseLeaveHandler = () => {
+    mouse.x = -9999;
+    mouse.y = -9999;
+    isHovering = false;
+  };
+
+  window.addEventListener('pointermove', meshPointerMoveHandler, { passive: true });
+  document.addEventListener('mouseleave', meshMouseLeaveHandler, { passive: true });
+
+  const RADIUS = 200;
+  const STRENGTH = 35;
+
+  function animateMesh() {
+    meshHoverAnimationId = requestAnimationFrame(animateMesh);
+
+    charStates.forEach(state => {
+      const rect = state.el.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+
+      const dx = mouse.x - cx;
+      const dy = mouse.y - cy;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < RADIUS && isHovering) {
+        const force = Math.pow((RADIUS - dist) / RADIUS, 1.5);
+        state.targetX = (dx / dist) * force * STRENGTH;
+        state.targetY = (dy / dist) * force * STRENGTH;
+        state.targetScale = 1 + force * 0.3;
+        state.targetRotate = (dx / RADIUS) * force * 22;
+        state.targetColorT = force;
+      } else {
+        state.targetX = 0;
+        state.targetY = 0;
+        state.targetScale = 1;
+        state.targetRotate = 0;
+        state.targetColorT = 0;
+      }
+
+      state.x += (state.targetX - state.x) * 0.12;
+      state.y += (state.targetY - state.y) * 0.12;
+      state.scale += (state.targetScale - state.scale) * 0.12;
+      state.rotate += (state.targetRotate - state.rotate) * 0.12;
+      state.colorT += (state.targetColorT - state.colorT) * 0.12;
+
+      state.el.style.transform = `translate3d(${state.x.toFixed(2)}px, ${state.y.toFixed(2)}px, 0) scale(${state.scale.toFixed(3)}) rotate(${state.rotate.toFixed(2)}deg)`;
+
+      if (state.colorT > 0.02) {
+        state.el.style.color = `hsl(${135 + state.colorT * 60}, 90%, ${46 + state.colorT * 8}%)`;
+        state.el.style.textShadow = `0 ${3 * state.colorT}px ${14 * state.colorT}px rgba(190, 237, 53, ${0.75 * state.colorT})`;
+        state.el.style.zIndex = '10';
+      } else {
+        state.el.style.color = '';
+        state.el.style.textShadow = '';
+        state.el.style.zIndex = '';
+      }
+    });
+  }
+
+  animateMesh();
+}
+window.initMeshTextHover = initMeshTextHover;
+
+// initialize with BlurText parameters & Mesh Text Hover
 initHeroTitleAnimation({
-  delay: 200,
+  delay: 35,
   duration: 0.7,
-  ease: 'linear',
-  splitType: 'words',
+  ease: 'power3.out',
+  splitType: 'chars',
   onComplete: () => {
-    console.log('Animation completed!');
+    initMeshTextHover();
   }
 });
 
